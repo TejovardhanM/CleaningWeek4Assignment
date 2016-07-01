@@ -93,7 +93,8 @@ onedata$subjectID<-factor(onedata$subjectID)
 indtidyset<-recast(onedata, subjectID+Activitytype ~ variable, id.var = 1:2 , mean)
 
 ###write the new set to a file...
-write.csv(indtidyset, "C:\\Tejo\\Datascience\\CleansingData\\tidydataset.csv")
+##write.csv(indtidyset, "C:\\Tejo\\Datascience\\CleansingData\\tidydataset.csv")
+write.table(indtidyset, "C:\\Tejo\\Datascience\\CleansingData\\tidydataset.txt", row.names = FALSE, quote = FALSE)
 
 
 
